@@ -10,6 +10,10 @@ module Forem
       def self.sanitize(text)
         Sanitize.clean(text, Sanitize::Config::RELAXED)
       end
+
+      def self.blockquote(text)
+        "<blockquote>#{text}</blockquote>\n\n<p></p>".html_safe
+      end
     end
   end
 end
