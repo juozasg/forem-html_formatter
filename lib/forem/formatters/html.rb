@@ -4,7 +4,7 @@ module Forem
   module Formatters
     class HTML
       def self.format(text)
-        ("<br/>" + text).html_safe
+        (text).html_safe
       end
 
       def self.sanitize(text)
